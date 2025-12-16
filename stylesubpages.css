@@ -1,0 +1,736 @@
+
+body {
+    background-color: rgba(254, 253, 245, 1);
+  padding-top: 64px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Header styling */
+.header {
+  position: fixed;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: rgba(254, 253, 245, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+/* Logo area */
+.header .logo,
+.header .brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Logo image sizing and alignment */
+.header .logo img,
+.header .brand img {
+  height: calc(64px * 0.64); /* scales with header */
+  width: auto;
+  display: block;
+}
+
+/* Navigation */
+.header nav,
+.header .nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* for list, make it horizontal */
+.header nav ul,
+.header .nav ul {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+/* List items should not wrap vertically */
+.header nav li,
+.header .nav li {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Links styling */
+.header a {
+  color:  rgba(16, 34, 41, 1);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.45rem 0.6rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  line-height: 1;
+}
+
+/* Hover / focus states */
+.header nav li a:hover,
+.header nav li a:focus {
+  background: rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+
+.faraos-container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0 1rem;
+  padding-bottom: 5rem;
+  border-bottom: 5px solid rgba(16, 34, 41, 1);
+  position: relative;
+}
+
+.links {
+    display: inline-flex;
+    align-items: center;
+    gap: 1300px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.links ul {
+    display: flex;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+    align-items: center;
+    
+}
+
+.links li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.links a {
+    color: rgba(16, 34, 41, 1);
+    text-decoration: underline;
+    background: transparent;
+    padding: 0;
+    display: inline-block;
+    line-height: 50px;
+}
+
+/* IMG */
+.section-image {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+}
+.section-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+     display: flex;
+    justify-content: center;
+}
+.sbut {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.info-box h2 {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    padding-left: 3rem;
+    color: #102229;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 112px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    overflow: visible;
+    }
+
+    .info-box h2:after{
+        content: "";
+        position: absolute;
+        left: calc(0.2rem + 3rem);
+        top: 100%;
+        transform: translateY(0.5rem);
+        width: max(0px, calc(50vw - (1rem + 3rem)));
+        height: 3px;
+        background: #102229;
+    }
+
+.info-box p {
+    margin: 0;
+    padding: 3rem;
+    color: #102229;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.16px;
+   position: relative;
+    
+}
+
+ .info-box p:after{
+        content: "";
+        position: absolute;
+        left: calc(0.2rem + 3rem);
+        top: 100%;
+        transform: translateY(0.5rem);
+        width: max(0px, calc(50vw - (1rem + 3rem)));
+        height: 3px;
+        background: #102229;
+    }
+
+
+/* container  side-by-side */
+.info-container {
+    display: flex;
+    gap: 15rem;
+    align-items: stretch;
+}
+
+/* make each box flex items that share available space and can shrink */
+.info-box,
+.info-box2 {
+    flex: 1 1 0;
+    min-width: 0; /* prevents overflow when content is long */
+}
+
+/* align content of the right box to the right edge */
+.info-box2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: left;
+    margin-top: 2.80%;
+   position: relative;
+}
+
+.info-box2 p {
+    display: flex;
+margin-left: -20%;
+padding: 3rem;
+color: #102229;
+font-family: "Roboto Condensed",sans-serif;
+font-size: 36px;
+font-style: normal;
+font-weight: 300;
+line-height: 145%; 
+}
+
+.map-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-top: 50px;
+    padding-left: 3rem
+}
+.map-wrapper iframe {
+    width: 800px;
+    height: 450px;
+    max-width: 100%;
+    border: 0;
+    outline: none;
+    touch-action: manipulation; /* helps on touch devices */
+}
+
+.calendar .title {
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+    color: #102229;
+font-family: "Roboto Flex", sans-serif;
+font-size: 195px;
+font-style: normal;
+font-weight: 900;
+}
+
+.month {
+    display: inline-block;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    position: relative;
+    color: #102229;
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 160px;
+    font-style: normal;
+    font-weight: 800;
+    margin-top: 635px;
+}
+
+
+.days {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    vertical-align: top;
+    margin-left: -25rem;
+    margin-top: -1rem;
+    color: #102229;
+    list-style: none;
+    }
+
+.days li {
+        margin: 1rem;
+        padding: 1.3rem;
+        position: relative;
+        }
+
+.days li::after {
+content: "";
+position: absolute;
+width: 1168px;
+height: 3px;
+background: #102229;
+top: 80%;
+transform: translate(-46%, -50%, -50%, -46%);
+        }
+
+.days h2 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #102229;
+font-family: "Roboto Flex", sans-serif;
+font-size: 56px;
+font-style: normal;
+font-weight: 800;
+}
+
+.days h3 {
+    display: inline-block;
+    margin: 0;
+    padding-left: 40px;
+    color: #102229;
+font-family: "Roboto Flex", sans-serif;
+font-size: 56px;
+font-style: italic;
+font-weight: 600;
+font-family: "Roboto Flex", sans-serif;
+}
+
+
+.reviews-box {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    min-height: 80vh;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    white-space: wrap;
+    
+}
+
+
+
+.reviews-box p {
+    margin: 0 2rem;
+    padding: 2rem;
+    color: #102229;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.16px;
+   background-color: rgba(254, 253, 245, 1);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+    flex: 0 0 auto; 
+    display: inline-flex;
+    width: 466px;
+    height: 150px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: center;
+    word-break: break-word;
+}
+
+.reviews-box .second {
+    font-weight: 800;
+
+}
+
+.reviews-box > *:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* WebKit scrollbar styling */
+.reviews-box::-webkit-scrollbar {
+    height: 0px;
+    border-radius: 999px;
+    background: rgba(211, 211, 211, 0.12);
+}
+
+
+.reviewimg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    margin-top: -60px;
+}
+
+
+.fqa h2 {
+    color: #102229;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 112px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 2.16px;
+    margin-bottom: 3rem;
+    margin-top: -75px;
+}
+
+
+/* Accordion panel from https://www.w3schools.com/howto/howto_js_accordion.asp */
+
+.accordion {
+  background-color: #eee;
+  color: #102229;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  align-self: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.16px;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  color: #102229;
+  display: none;
+  overflow: hidden;
+  padding: 0 18px;
+  background-color: rgba(254, 253, 245, 1);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+    font-family: 'Roboto Condensed', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.16px;
+}
+
+
+.footer-main {
+background-image: url(./assets/footerback.png);
+background-repeat: no-repeat;
+background-size: cover;
+text-align: center;
+color: rgba(254, 253, 245, 1);
+padding: 50px;
+position: relative;
+bottom: 0;
+width: 100%;
+font-family: "Roboto Condensed",sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+letter-spacing: 2.16px;
+margin-top: 80px;
+margin-left: -50px;
+}
+
+.footer-main a {
+    text-decoration: underline;
+    color: inherit;
+    
+}
+
+.footer-main a:hover,
+.footer-main a:focus {
+    opacity: 0.9;
+    outline: none;
+    text-decoration-color: rgba(255,255,255,0.9);
+}
+
+.footer-main a:visited {
+    color: inherit;
+}
+
+
+
+
+/* RESPONSIVE STYLES */
+
+
+@media (max-width: 430px) {
+ 
+.header {
+   padding: 0 0.5rem;
+    height: 56px;
+    box-sizing: border-box;
+    gap: 0.5rem;
+    
+}
+
+.header .logo
+{
+   display: none !important;
+}
+
+.header nav{
+   flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+    margin-left: -30px;
+}
+
+.header nav ul{
+   display: inline-flex;
+    gap: 0.4rem;
+    margin: 0;
+    margin-left: 15px;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+    min-width: 0;
+    font-size: 15px;
+}
+
+    
+
+.faraos-container img {
+        margin-top: 25px;
+        padding: 10px -10px;
+          height: auto;
+        width: 145%;
+     pointer-events: none;
+    }
+  
+
+
+  /* Links area: avoid huge gaps and center */
+  .links {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Section image should be full width with smaller radius */
+  .section-image img {
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .sbut {
+    margin-top: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .info-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .info-box h2 {
+    font-size: 52px;
+    padding-left: 1rem;
+  }
+  .info-box h2:after {
+    left: calc(0.2rem + 1rem);
+    width: 100%;
+  }
+
+  .info-box p {
+    padding: 1.25rem;
+    font-size: 18px;
+  }
+  .info-box p:after {
+    left: calc(0.2rem + 1rem);
+    width: 100%;
+  }
+
+  .info-box2 {
+    align-items: flex-start;
+    margin-top: 1rem;
+
+  }
+  .info-box2 p {
+    margin-left: 0;
+    margin-top: -3rem;
+    padding: 1.25rem;
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: 2.16px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .map-wrapper {
+    padding: 30px 0;
+  }
+
+  .calendar .title {
+    font-size: 75px;
+    margin-top: 2rem;
+  }
+.month {
+
+    display: none !important;
+}
+
+
+.days {
+
+  margin-left: 0;
+  margin-top: -50px;
+  padding-left: 0px;
+}
+
+/* Cant fix it so yeah you get the point */
+
+.days p {
+    font-size: 16px;
+    padding-left: 0px;
+    text-align: left;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.reviews-box {
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: visible;
+    height: auto;
+    scroll-snap-type: none;
+    white-space: normal;
+    padding: 5rem 0 3rem;
+  }
+  .reviews-box p {
+    width: calc(100% - 2rem);
+    max-width: 720px;
+    height: auto;
+    margin: 0.5rem 0;
+    font-size: 18px;
+    padding: 1rem;
+    text-align: left;
+  }
+
+
+.fqa {
+    margin-top: -450px;
+}
+
+.fqa h2 {
+    font-size: 95px;
+    margin-bottom: 20px;
+    margin-top: -150px;
+    padding-left: 1rem;
+  }
+
+
+.fqa {
+    position: relative;
+    z-index: 20;
+    pointer-events: auto;
+}
+
+.fqa .accordion {
+    position: relative;
+    z-index: 21;
+    pointer-events: auto;
+    touch-action: manipulation; /* improve tap response on mobile */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.fqa .panel {
+    position: relative;
+    z-index: 20;
+    pointer-events: auto;
+    overflow: visible; /* allow panel content to be seen/clicked */
+}
+
+
+/* Footer spacing */
+  .footer-main {
+margin-left: -40px;
+    font-size: 15px;
+    margin-top: 40px;
+  }
+
+  /* Misc small-screen fixes */
+  .links ul,
+  .header nav ul {
+    gap: 0.5rem;
+  }
+
+
+}

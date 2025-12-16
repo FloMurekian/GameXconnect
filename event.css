@@ -1,0 +1,277 @@
+body {
+    background-color: rgba(254, 253, 245, 1);
+  padding-top: 64px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Header styling */
+.header {
+  position: fixed;
+  inset: 0 auto auto 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: rgba(254, 253, 245, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+/* Logo area */
+.header .logo,
+.header .brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Logo image sizing and alignment */
+.header .logo img,
+.header .brand img {
+  height: calc(64px * 0.64); /* scales with header */
+  width: auto;
+  display: block;
+}
+
+/* Navigation */
+.header nav,
+.header .nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* for list, make it horizontal */
+.header nav ul,
+.header .nav ul {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+/* List items should not wrap vertically */
+.header nav li,
+.header .nav li {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Links styling */
+.header a {
+  color:  rgba(16, 34, 41, 1);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.45rem 0.6rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  line-height: 1;
+}
+
+/* Hover / focus states */
+.header nav li a:hover,
+.header nav li a:focus {
+  background: rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.event-container {
+    display: flex;
+    justify-content: center;
+}
+
+.date {
+  font-size: 150px;
+    font-family: 'Roboto flex', sans-serif;
+    font-weight: 900;
+    margin-bottom: 8px;
+    color: rgba(16, 34, 41, 1);
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.date-container img {
+    position: relative;
+    display: inline-block;
+    margin-top: -45px;
+    width: 100%;
+    border-bottom: solid 5px rgba(16, 34, 41, 1);
+}
+
+.background-box {
+    background-image: url('./assets/eventback1.png');
+    background-size: cover;
+    background-position: center;
+    width: 98%;
+    margin-right: 0px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(16, 34, 41, 1);
+    text-align: left;
+    margin-left: 20px;
+    align-self: flex-start; 
+    justify-self: start;
+    margin-top: 35px;
+    font-style: italic;
+    display: inline-block;
+}
+
+.title .home {
+   font-size: 20px;
+    margin-top: 30px;
+    font-style: normal;
+}
+
+.title a{
+    color: rgba(16, 34, 41, 1);
+    font-style: normal;
+}
+
+.title .home,
+.title a:hover {
+    color: #7e7e7e;
+}
+
+.event-info-box2 {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(16, 34, 41, 1);
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 190px;
+    margin-top: 35px;
+    gap: 12px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.highlight {
+    font-weight: 900;
+    font-size: 30px;
+    color: rgba(16, 34, 41, 1);
+}
+
+
+
+
+/* RESPONSIVE STYLES */
+
+
+@media (max-width: 430px)
+ 
+{
+ 
+.header {
+    padding: 0 0.5rem;
+    height: 56px;
+    box-sizing: border-box;
+    gap: 0.5rem;
+    
+}
+
+.header .logo
+{
+   display: none !important;
+}
+
+.header nav{
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+    margin-left: -30px;
+}
+
+.header nav ul{
+    display: inline-flex;
+    gap: 0.4rem;
+    margin: 0;
+    margin-left: 15px;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+    min-width: 0;
+    font-size: 15px;
+}
+
+.event-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.event-container img {
+    width: 150%;
+    height: auto;
+    margin: -50px;
+    margin-left: -50px;
+}
+
+.event-vector {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+.date-container .date {
+    font-size: 90px;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.background-box {
+    background-image: none !important;
+}
+
+
+.eventlogo {
+    max-width: 300px;
+    height: auto;   
+    margin-top: 70px;
+}
+
+.event-info-box2 {
+    max-width: 300px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgba(16, 34, 41, 1);
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+
+}
+
+}
